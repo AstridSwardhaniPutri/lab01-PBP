@@ -3,6 +3,9 @@ from wishlist.views import show_wishlist
 from wishlist.views import show_xml 
 from wishlist.views import show_json
 from wishlist.views import return_json_id
+from wishlist.views import register
+from wishlist.views import login_user
+from wishlist.views import logout_user
 
 app_name = 'wishlist'
 
@@ -11,4 +14,7 @@ urlpatterns = [
     path('xml/', show_xml, name='show_xml'),
     path('json/', show_json, name='show_json'),
     path('json/<int:id>', return_json_id, name='return_json_id'),
+    path('register/', register, name='register'),
+    path('login/', login_user, name='login'),
+    path('logout/', logout_user, name='logout'),
 ]
