@@ -47,10 +47,14 @@
   
 </html>
 <script>
-    let tab;
+    let table;
     function loadData() {
         $.get("{% url 'wishlist:show_json' %}", function (data) {
-            
+            table = `<tr>
+            <th>Nama Barang</th>
+            <th>Harga Barang</th>
+            <th>Deskripsi</th>
+          </tr>`;
         });
     }
 </script>
